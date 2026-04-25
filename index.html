@@ -2,138 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PMT's Link Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papa Mike Tango</title>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #121210;
+      color: #e8dfcf;
     }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+    .page {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 52px 22px;
     }
 
-    .bio {
-      padding: 20px;
-      border-bottom: 1px solid #333;
+    .card {
+      background: #1b1b17;
+      border: 1px solid #5f563f;
+      border-radius: 18px;
+      padding: 30px 24px;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
     }
 
-    .bio img {
-      width: 80px;
-      height: 80px;
+    .logo {
+      width: 112px;
+      height: 112px;
       border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 22px;
+      border: 2px solid #8a7a58;
+      background: #111;
     }
 
-    .bio h1 {
-      margin: 10px 0 5px;
+    .eyebrow {
+      color: #8f9567;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
-    .toggle-btn {
-      margin-top: 10px;
-      padding: 8px 12px;
-      background: #222;
-      border: none;
-      color: white;
-      cursor: pointer;
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: -0.03em;
+      color: #d8c49b;
     }
 
-    .bio-text {
-      margin-top: 10px;
-      display: none;
+    .tagline {
+      margin: 12px 0 0;
+      color: #b8ad96;
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: #4a422f;
+      margin: 24px 0;
     }
 
     .links {
-      padding: 20px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
 
-    .links a {
-      display: block;
-      padding: 15px;
-      background: #222;
+    .link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 16px;
+      border: 1px solid #6f6247;
+      border-radius: 12px;
+      background: #24231d;
+      color: #e8dfcf;
       text-decoration: none;
-      color: white;
-      border-radius: 8px;
+      font-weight: 700;
+      transition: all 0.18s ease;
+    }
+
+    .link span {
+      color: #9ca36f;
+    }
+
+    .link:hover {
+      border-color: #d8c49b;
+      background: #2b2a22;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(216, 196, 155, 0.10);
+    }
+
+    .footer {
+      margin-top: 22px;
+      color: #8d846f;
+      font-size: 0.85rem;
+      line-height: 1.5;
       text-align: center;
-    }
-
-    .links a:hover {
-      background: #333;
-    }
-
-    /* Desktop layout */
-    @media (min-width: 768px) {
-      .container {
-        flex-direction: row;
-      }
-
-      .bio {
-        width: 40%;
-        border-right: 1px solid #333;
-        border-bottom: none;
-      }
-
-      .links {
-        width: 60%;
-      }
-
-      .bio-text {
-        display: block !important;
-      }
-
-      .toggle-btn {
-        display: none;
-      }
     }
   </style>
 </head>
 
 <body>
+  <main class="page">
+    <section class="card">
+      <img class="logo" src="images/pmt-logo.jpg" alt="Papa Mike Tango logo" />
 
-<div class="container">
+      <div class="eyebrow">Papa Mike Tango</div>
 
-  <div class="bio">
-    <img src="images/IMG_1354.JPG" alt="Profile"/>
+      <h1>Preparedness, outdoors, and the work in between.</h1>
 
-    <h1>Papa Mike Tango</h1>
-    <p>Shooting | Camping | Outdoors | Preparedness</p>
+      <p class="tagline">
+        Field notes from a suburban guy learning shooting, camping,
+        preparedness, gear, and the outdoors one step at a time.
+      </p>
 
-    <button class="toggle-btn" onclick="toggleBio()">Show Bio</button>
+      <div class="divider"></div>
 
-    <div class="bio-text" id="bioText">
-      <p>Hey, this is Papa Mike! Welcome to my landing page!</p>
-      <p>I'm a suburbanite who loves shooting and the great outdoors! Below are my links! You all know the drill!</p>
-    </div>
-  </div>
+      <div class="links">
+        <a class="link" href="https://www.youtube.com/@PapaMikeTango12" target="_blank" rel="noopener noreferrer">YouTube <span>→</span></a>
+        <a class="link" href="https://x.com/papamiketango12" target="_blank" rel="noopener noreferrer">X <span>→</span></a>
+        <a class="link" href="https://www.instagram.com/papamiketango12/" target="_blank" rel="noopener noreferrer">Instagram <span>→</span></a>
+        <a class="link" href="https://substack.com/@papamiketango" target="_blank" rel="noopener noreferrer">Substack <span>→</span></a>
+        <a class="link" href="#">Gear List <span>→</span></a>
+        <a class="link" href="mailto:pmt@peterthompson.co?subject=PMT%20Gear%20Question">Contact Me <span>→</span></a>
+        <a class="link" href="https://peterthompson.co" target="_blank" rel="noopener noreferrer">Main Site <span>→</span></a>
+      </div>
+    </section>
 
-  <div class="links">
-    <a href="https://www.youtube.com/@PapaMikeTango12" target="_blank" rel="noopener noreferrer">YouTube</a>
-    <a href="https://x.com/papamiketango12" target="_blank" rel="noopener noreferrer">X</a>
-    <a href="https://www.instagram.com/papamiketango12/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://substack.com/@papamiketango" target="_blank" rel="noopener noreferrer">Substack</a>
-    <a href="#">Gear List</a>
-    <a href="mailto:papamiketango12@gmail.com?subject=PMT%20PMT%20Gear%20Question" target="_blank">
-  Contact Me
-    <a href="peterthompson.co" target="_blank" rel="noopener noreferrer">Main Site</a>
-</a>
-  </div>
-
-</div>
-
-<script>
-  function toggleBio() {
-    const bio = document.getElementById("bioText");
-    bio.style.display = bio.style.display === "block" ? "none" : "block";
-  }
-</script>
-
+    <p class="footer">
+      Built for the range, the trail, the campsite, and the notebook.
+    </p>
+  </main>
 </body>
 </html>
